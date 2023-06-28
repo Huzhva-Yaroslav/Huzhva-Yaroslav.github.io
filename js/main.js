@@ -512,17 +512,10 @@ $(".main-block__form-request").on('submit', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'post',
-        url: '/callback',
+        url: 'mail.php',
         data: $(this).serialize(),
-        dataType: "json",
         success: function (data) {
-            dataLayer.push({
-              'event' : 'GAEvent',
-              'eventCategory' : 'Form Submit',
-              'eventAction' : 'Order',
-              'eventLabel' : 'marka'
-            });
-            gratitudeOpen();
+           alert("Спасибо, мы с вами свяжемся.")
         },
         error: function (error) {
             alert(jQuery.parseJSON(error.responseText).message);
