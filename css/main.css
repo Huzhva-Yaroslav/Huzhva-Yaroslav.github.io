@@ -1462,13 +1462,8 @@ address{
   display: block;
 }
 
-#footer_phone{
+.footer_phones{
   height: 100px;
-  overflow: scroll;
-
-
- 
-  
-  
+  overflow-y: scroll;
   
 }
